@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/user")
 public class UserController {
 
     @GetMapping("/index")
@@ -17,7 +17,6 @@ public class UserController {
 
     @GetMapping("/")
     private String common(ModelMap model) {
-        model.addAttribute("str", "Common");
-        return "index";
+        return "register";
     }
 }
